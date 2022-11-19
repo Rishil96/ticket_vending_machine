@@ -33,3 +33,9 @@ def get_perfume_ticket():
     while True:
         ticket_number += 1
         yield f"P-{ticket_number}"
+
+
+# Go back to home screen
+def go_back():
+    user_input = input("\nPress any button to go back to the home screen:- ")
+    return bool(user_input)

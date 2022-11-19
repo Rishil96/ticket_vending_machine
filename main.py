@@ -2,8 +2,8 @@
 import numbers
 import time
 
-perfume_ticket = numbers.get_cosmetics_ticket()
-medicine_ticket = numbers.get_cosmetics_ticket()
+perfume_ticket = numbers.get_perfume_ticket()
+medicine_ticket = numbers.get_medicine_ticket()
 cosmetics_ticket = numbers.get_cosmetics_ticket()
 
 
@@ -26,9 +26,23 @@ def main():
             continue
 
         if user_input == "1":
+            print("Welcome to Perfume Store")
+            print(next(perfume_ticket))
+            numbers.go_back()
+
+        elif user_input == "2":
+            print("Welcome to Medicine Store")
+            print(next(medicine_ticket))
+            numbers.go_back()
+
+        elif user_input == "3":
             print("Welcome to Cosmetics Store")
-            print(next(numbers.get_cosmetics_ticket()))
-            time.sleep(3)
+            print(next(cosmetics_ticket))
+            numbers.go_back()
+
+        else:
+            print("The store is now closed. Come back again tomorrow :)")
+            is_open = False
 
     return None
 
