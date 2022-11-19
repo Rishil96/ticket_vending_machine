@@ -2,10 +2,6 @@
 import generator_functions
 import time
 
-perfume_ticket = generator_functions.get_perfume_ticket()
-medicine_ticket = generator_functions.get_medicine_ticket()
-cosmetics_ticket = generator_functions.get_cosmetics_ticket()
-
 
 def main():
 
@@ -26,22 +22,26 @@ def main():
             continue
 
         if user_input == "1":
+            generator_functions.clear_screen()
             print("Welcome to Perfume Store.")
             generator_functions.get_perfume_ticket()
             generator_functions.go_back()
 
         elif user_input == "2":
+            generator_functions.clear_screen()
             print("Welcome to Medicine Store.")
             generator_functions.get_medicine_ticket()
             generator_functions.go_back()
 
         elif user_input == "3":
+            generator_functions.clear_screen()
             print("Welcome to Cosmetics Store.")
             generator_functions.get_cosmetics_ticket()
             generator_functions.go_back()
 
         else:
-            print("The store is now closed. Come back again tomorrow :)")
+            generator_functions.clear_screen()
+            print("\nThe store is now closed. Come back again tomorrow :)")
             is_open = False
 
     return None
