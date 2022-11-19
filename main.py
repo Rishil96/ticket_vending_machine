@@ -2,6 +2,10 @@
 import numbers
 import time
 
+perfume_ticket = numbers.get_cosmetics_ticket()
+medicine_ticket = numbers.get_cosmetics_ticket()
+cosmetics_ticket = numbers.get_cosmetics_ticket()
+
 
 def main():
 
@@ -20,8 +24,11 @@ def main():
             print("Invalid Input. Try again in 3 seconds!")
             time.sleep(3)
             continue
-        else:
-            break
+
+        if user_input == "1":
+            print("Welcome to Cosmetics Store")
+            print(next(numbers.get_cosmetics_ticket()))
+            time.sleep(3)
 
     return None
 

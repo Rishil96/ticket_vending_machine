@@ -9,3 +9,27 @@ def is_input_valid(user_input):
 # Clear screen
 def clear_screen():
     system("cls")
+
+
+# Ticket generator for cosmetics
+def get_cosmetics_ticket():
+    ticket_number = 0
+    while True:
+        ticket_number += 1
+        yield f"C-{ticket_number}"
+
+
+# Ticket generator for medicines
+def get_medicine_ticket():
+    ticket_number = 0
+    while True:
+        ticket_number += 1
+        yield f"M-{ticket_number}"
+
+
+# Ticket generator for perfume
+def get_perfume_ticket():
+    ticket_number = 0
+    while True:
+        ticket_number += 1
+        yield f"P-{ticket_number}"
